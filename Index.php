@@ -14,7 +14,8 @@ include BASEDIR.'/Common/Loader.php';
 
 //自动加载类的常用方法
 #调用非静态的写法 spl_autoload_register(array(new Common\Loader(),'autoload'));
-#spl_autoload_register('Common\Loader::autoload');
+#调用静态类的实例化写法
+spl_autoload_register('Common\Loader::autoload');
 
 //自动加载类的方法旧函数被废弃即将
 #function __autoload($className)
